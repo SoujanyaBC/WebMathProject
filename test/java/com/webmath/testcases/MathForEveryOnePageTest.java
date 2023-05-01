@@ -1,15 +1,11 @@
 package com.webmath.testcases;
-
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
 import com.webmath.base.TestBase;
-
 import com.webmath.pages.MathForEveryOnePage;
 
 public class MathForEveryOnePageTest extends TestBase {
@@ -29,7 +25,7 @@ public class MathForEveryOnePageTest extends TestBase {
 	 @Test(priority=1)
 	 public void tipCalculationTest() {
 	 mathForEveryOnePage.tipCalculation();
-     WebElement actualResult = driver.findElement(By.xpath(prop.getProperty("actual_output_locator1")));
+         WebElement actualResult = driver.findElement(By.xpath(prop.getProperty("actual_output_locator1")));
 	 String actualOutput =  actualResult.getText();
 	 String expectedOutput = prop.getProperty("expected_output");
 	 Assert.assertEquals(actualOutput,expectedOutput);	
@@ -56,7 +52,7 @@ public class MathForEveryOnePageTest extends TestBase {
 	
 	}
 	
-    @Test(priority=4)
+        @Test(priority=4)
 	public void validateWeightOnAnotherPlanetCalculation() {
 	mathForEveryOnePage.weightOnAnotherPlanetCalculation();
 	WebElement actualResult = driver.findElement(By.xpath(prop.getProperty("actual_output_locator4")));
@@ -66,7 +62,7 @@ public class MathForEveryOnePageTest extends TestBase {
 	}
     
     
-    @Test(priority=5)
+        @Test(priority=5)
 	public void validateLengthConversion() {
 	mathForEveryOnePage.lengthConversion();
 	WebElement actualResult = driver.findElement(By.xpath(prop.getProperty("actual_output_locator5")));
