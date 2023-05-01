@@ -1,12 +1,8 @@
 package com.webmath.testcases;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
-
 import org.testng.Assert;
-
 import org.testng.annotations.BeforeMethod;
-
-
 import com.webmath.base.TestBase;
 import com.webmath.pages.HomePage;
 
@@ -41,7 +37,7 @@ public class HomePageTest extends TestBase{
 	    
 	 @Test(priority=3)
 	 public void validateMathForEveryOneLink() {
-     homePage.mathForEveryOneLink();
+         homePage.mathForEveryOneLink();
 		
 	 }
 	
