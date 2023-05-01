@@ -1,9 +1,7 @@
 package com.webmath.pages;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
 import com.webmath.base.TestBase;
 
 public class AlgebraPage extends TestBase {
@@ -17,7 +15,7 @@ public class AlgebraPage extends TestBase {
 
     public void squareRootsSimplification() {
 	
-    	WebElement algebra = driver.findElement(By.linkText(prop.getProperty("algebra_1")));
+    	        WebElement algebra = driver.findElement(By.linkText(prop.getProperty("algebra_1")));
 		algebra.click();
 		
 		WebElement squareRoots = driver.findElement(By.linkText(prop.getProperty("square_Roots")));
@@ -31,7 +29,7 @@ public class AlgebraPage extends TestBase {
 		simplifyButton.click();
 	    
 		WebElement iframe = driver.findElement(By.xpath(prop.getProperty("i_frame")));
-  	    driver.switchTo().frame(iframe);
+  	        driver.switchTo().frame(iframe);
 	
 	
     }	
