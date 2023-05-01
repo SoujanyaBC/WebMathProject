@@ -1,27 +1,25 @@
 package com.webmath.pages;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-
 import com.webmath.base.TestBase;
 
-public class K8MathPage extends TestBase {
+       public class K8MathPage extends TestBase {
 	
-	    WebDriver driver;
-
-	  
+	WebDriver driver;
+	       
         public K8MathPage(WebDriver driver){
-		this.driver = driver;
-	    }
+	this.driver = driver;
+		
+	 }
     
-        public void multiplication() {
+               public void multiplication() {
         	
-        WebElement k8Math = driver.findElement(By.linkText(prop.getProperty("k_8_Math")));
-    	k8Math.click();	
+                WebElement k8Math = driver.findElement(By.linkText(prop.getProperty("k_8_Math")));
+    	        k8Math.click();	
     	
-    	WebElement multiply = driver.findElement(By.linkText(prop.getProperty("multiply_1")));
+    	        WebElement multiply = driver.findElement(By.linkText(prop.getProperty("multiply_1")));
 		multiply.click();
 		
 		WebElement multiplyNumber1 = driver.findElement(By.xpath(prop.getProperty("multiply_Number1")));
@@ -34,10 +32,11 @@ public class K8MathPage extends TestBase {
 		multiplyThemButton.click();
 		
 		WebElement iframe = driver.findElement(By.xpath(prop.getProperty("i_frame")));
-  	    driver.switchTo().frame(iframe);
+  	        driver.switchTo().frame(iframe);
   	    
   	    try {
-			Thread.sleep(2000);
+			
+	    Thread.sleep(2000);
 		
 		
   	    Actions actions = new Actions(driver);
@@ -52,7 +51,7 @@ public class K8MathPage extends TestBase {
 		public void division() {
 			
 		WebElement k8Math = driver.findElement(By.linkText(prop.getProperty("k_8_Math")));
-	    k8Math.click();		
+	        k8Math.click();		
 		
 		WebElement divide = driver.findElement(By.linkText(prop.getProperty("divide")));
 		divide.click();
@@ -67,7 +66,7 @@ public class K8MathPage extends TestBase {
 		divideThemButton.click();
 		
 		WebElement iframe = driver.findElement(By.xpath(prop.getProperty("i_frame")));
-  	    driver.switchTo().frame(iframe);
+  	        driver.switchTo().frame(iframe);
 		
 	
 		}
