@@ -1,13 +1,11 @@
 package com.webmath.pages;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-
 import com.webmath.base.TestBase;
 
-public class GeneralMathPage extends TestBase {
+       public class GeneralMathPage extends TestBase {
 	
 	   WebDriver driver;
 
@@ -19,8 +17,8 @@ public class GeneralMathPage extends TestBase {
     
         public void fractionToDecimalConversion() {
     	
-        WebElement generalMath = driver.findElement(By.xpath(prop.getProperty("general_math")));
-        generalMath.click();
+                WebElement generalMath = driver.findElement(By.xpath(prop.getProperty("general_math")));
+                generalMath.click();
 		
 		WebElement fractionToDecimal = driver.findElement(By.linkText(prop.getProperty("fraction_to_decimal")));
 		fractionToDecimal.click();
@@ -48,11 +46,11 @@ public class GeneralMathPage extends TestBase {
 		fractionSubmitButton.click();
 		
 		WebElement iframe = driver.findElement(By.xpath(prop.getProperty("i_frame")));
-  	    driver.switchTo().frame(iframe);
+  	        driver.switchTo().frame(iframe);
 		
   	    
-  	    Actions actions = new Actions(driver);
-  	    actions.scrollByAmount(0,300).perform();
+  	        Actions actions = new Actions(driver);
+  	        actions.scrollByAmount(0,300).perform();
 	
         }
          
@@ -60,10 +58,10 @@ public class GeneralMathPage extends TestBase {
         public void decimalToFractionConversion() {
         
         	
-        WebElement generalMath = driver.findElement(By.xpath(prop.getProperty("general_math")));
-        generalMath.click();
+               WebElement generalMath = driver.findElement(By.xpath(prop.getProperty("general_math")));
+               generalMath.click();
         
-        WebElement decimalToFraction = driver.findElement(By.linkText(prop.getProperty("decimal_to_fraction")));
+                WebElement decimalToFraction = driver.findElement(By.linkText(prop.getProperty("decimal_to_fraction")));
 		decimalToFraction.click();
 		
 		WebElement positiveDecimalNumber = driver.findElement(By.id(prop.getProperty("positive_decimal_number")));
@@ -74,10 +72,10 @@ public class GeneralMathPage extends TestBase {
 		decimalSubmitButton.click();
 	
 		WebElement iframe = driver.findElement(By.xpath(prop.getProperty("i_frame")));
-  	    driver.switchTo().frame(iframe);
+  	        driver.switchTo().frame(iframe);
   	    
-  	    Actions actions = new Actions(driver);
-  	    actions.scrollByAmount(0,500).perform();
+  	        Actions actions = new Actions(driver);
+  	        actions.scrollByAmount(0,500).perform();
  
         }
 
