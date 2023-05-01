@@ -1,21 +1,19 @@
 package com.webmath.pages;
-
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
-
 import com.webmath.base.TestBase;
 
-public class MathForEveryOnePage extends TestBase {
-	WebDriver driver;
+   public class MathForEveryOnePage extends TestBase {
+   WebDriver driver;
 
   
     public MathForEveryOnePage(WebDriver driver){
-		this.driver = driver;
-	}
+    this.driver = driver;
+	
+    }
     
     public boolean tipCalculation() {
     	
@@ -32,31 +30,31 @@ public class MathForEveryOnePage extends TestBase {
     	typeTheTipAmount.clear();
     	typeTheTipAmount.sendKeys(prop.getProperty("tip_amount_value"));
  	    
- 	    WebElement costOfMeal=driver.findElement(By.name(prop.getProperty("meal_Cost")));
- 	    costOfMeal.sendKeys(prop.getProperty("meal_cost_value"));
+         WebElement costOfMeal=driver.findElement(By.name(prop.getProperty("meal_Cost")));
+ 	 costOfMeal.sendKeys(prop.getProperty("meal_cost_value"));
  	    
- 	    WebElement figureTipButton = driver.findElement(By.xpath(prop.getProperty("tip_Button")));
- 	    figureTipButton.click();
+ 	 WebElement figureTipButton = driver.findElement(By.xpath(prop.getProperty("tip_Button")));
+ 	 figureTipButton.click();
  	    
- 	    WebElement iframe = driver.findElement(By.xpath(prop.getProperty("i_frame")));
- 	    driver.switchTo().frame(iframe);
+ 	  WebElement iframe = driver.findElement(By.xpath(prop.getProperty("i_frame")));
+ 	  driver.switchTo().frame(iframe);
 		
- 	    return true;
+ 	  return true;
  	    
         }
     
         public boolean simpleInterestCalculation() {
     	 
-    	WebElement mathForEvery1 = driver.findElement(By.linkText(prop.getProperty("math_for_every_one_button")));
-        mathForEvery1.click(); 
+    	       WebElement mathForEvery1 = driver.findElement(By.linkText(prop.getProperty("math_for_every_one_button")));
+               mathForEvery1.click(); 
     	
-    	WebElement simpleInterest = driver.findElement(By.linkText(prop.getProperty("simple_interest")));
+    	        WebElement simpleInterest = driver.findElement(By.linkText(prop.getProperty("simple_interest")));
  		simpleInterest.click();
  		
  		WebElement principalAmount = driver.findElement(By.xpath(prop.getProperty("principal")));
  		principalAmount.sendKeys(prop.getProperty("principal_amount_value"));
  		
- 	    WebElement interestRate = driver.findElement(By.xpath(prop.getProperty("interest")));
+ 	        WebElement interestRate = driver.findElement(By.xpath(prop.getProperty("interest")));
  		interestRate.sendKeys(prop.getProperty("interest_rate_value"));
  		
  		WebElement annualInterestDropdown = driver.findElement(By.xpath(prop.getProperty("interest_units")));
@@ -74,26 +72,26 @@ public class MathForEveryOnePage extends TestBase {
  		amountOfInterestButton.click();
  		
  		WebElement iframe = driver.findElement(By.xpath(prop.getProperty("i_frame")));
-  	    driver.switchTo().frame(iframe);
+  	        driver.switchTo().frame(iframe);
 		
   	    
-  	    return true;
+  	        return true;
   	    
         }
      
      
         public boolean costOfElectricityCalculation() {
     	 
-     	WebElement mathForEvery1 = driver.findElement(By.linkText(prop.getProperty("math_for_every_one_button")));
-        mathForEvery1.click(); 
+     	        WebElement mathForEvery1 = driver.findElement(By.linkText(prop.getProperty("math_for_every_one_button")));
+                mathForEvery1.click(); 
      
-        WebElement CostOfElectricity = driver.findElement(By.linkText(prop.getProperty("cost_of_electricity")));
+                WebElement CostOfElectricity = driver.findElement(By.linkText(prop.getProperty("cost_of_electricity")));
 		CostOfElectricity.click();
 		
 		WebElement power = driver.findElement(By.xpath(prop.getProperty("power")));
 		power.sendKeys(prop.getProperty("power_value"));
 		
-	    WebElement time = driver.findElement(By.xpath(prop.getProperty("time")));
+	        WebElement time = driver.findElement(By.xpath(prop.getProperty("time")));
 		time.sendKeys(prop.getProperty("time_value"));
 		
 		WebElement hoursDropdown = driver.findElement(By.xpath(prop.getProperty("hours_dropdown")));
@@ -113,7 +111,7 @@ public class MathForEveryOnePage extends TestBase {
 			e.printStackTrace();
 		}
 		
-		WebElement iframe = driver.findElement(By.xpath(prop.getProperty("i_frame")));
+	    WebElement iframe = driver.findElement(By.xpath(prop.getProperty("i_frame")));
   	    driver.switchTo().frame(iframe);
 		
   	    
@@ -124,10 +122,10 @@ public class MathForEveryOnePage extends TestBase {
 		
         }
      
-		public void weightOnAnotherPlanetCalculation() {
+	public void weightOnAnotherPlanetCalculation() {
 	    	 
-	    WebElement mathForEvery1 = driver.findElement(By.linkText(prop.getProperty("math_for_every_one_button")));
-	    mathForEvery1.click(); 
+	        WebElement mathForEvery1 = driver.findElement(By.linkText(prop.getProperty("math_for_every_one_button")));
+	        mathForEvery1.click(); 
 	     
 		WebElement weightOnAnotherPlanet = driver.findElement(By.linkText(prop.getProperty("weight_on_another_planet")));
 		weightOnAnotherPlanet.click();
@@ -143,7 +141,7 @@ public class MathForEveryOnePage extends TestBase {
 		weighSubmitButton.click();
 		
 		WebElement iframe = driver.findElement(By.xpath(prop.getProperty("i_frame")));
-  	    driver.switchTo().frame(iframe);
+  	        driver.switchTo().frame(iframe);
 		
   	    }
 		
@@ -170,7 +168,7 @@ public class MathForEveryOnePage extends TestBase {
 		lengthSubmitButton.click();
 		
 		WebElement iframe = driver.findElement(By.xpath(prop.getProperty("i_frame")));
-  	    driver.switchTo().frame(iframe);
+  	        driver.switchTo().frame(iframe);
 		
 		
 		
