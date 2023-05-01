@@ -20,10 +20,10 @@ public class AlgebraPageTest extends TestBase {
 	algebraPage = new AlgebraPage(driver);
 	}
 	
-    @Test
+        @Test
 	public void validateSquareRootsSimplification() {
 	algebraPage.squareRootsSimplification();
-    WebElement actualResult = driver.findElement(By.xpath(prop.getProperty("actual_output_locator_1_sq")));
+        WebElement actualResult = driver.findElement(By.xpath(prop.getProperty("actual_output_locator_1_sq")));
 	boolean actualOutput =  actualResult.isDisplayed();
 	Assert.assertTrue(actualOutput);	
 	}
