@@ -15,7 +15,7 @@ import com.webmath.base.TestBase;
 	     
         }
     
-        public void fractionToDecimalConversion() {
+               public void fractionToDecimalConversion() {
     	
                 WebElement generalMath = driver.findElement(By.xpath(prop.getProperty("general_math")));
                 generalMath.click();
@@ -55,11 +55,11 @@ import com.webmath.base.TestBase;
         }
          
         
-        public void decimalToFractionConversion() {
+              public void decimalToFractionConversion() {
         
         	
-               WebElement generalMath = driver.findElement(By.xpath(prop.getProperty("general_math")));
-               generalMath.click();
+                WebElement generalMath = driver.findElement(By.xpath(prop.getProperty("general_math")));
+                generalMath.click();
         
                 WebElement decimalToFraction = driver.findElement(By.linkText(prop.getProperty("decimal_to_fraction")));
 		decimalToFraction.click();
